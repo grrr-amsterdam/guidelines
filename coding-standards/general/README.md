@@ -38,8 +38,8 @@ An example for why we use spaces instead of tabs is for instance this docblock:
 
 ```php
 /**
- * @param Array   $data      Content of new record
- * @param Boolean $overwrite Wether to overwrite existing records.
+ * @param array $data      Content of new record
+ * @param bool  $overwrite Wether to overwrite existing records.
  */
 ```
 
@@ -111,11 +111,11 @@ See also ["Introduce Parameter Object"](http://sourcemaking.com/refactoring/intr
 Try to write array/object/dictionary properties on new lines:
 
 ```php
-$abc = array(
+$abc = [
     'pork' => 'butts',
     'beef' => 'cake',
     'fruit' => 'loop'
-);
+];
 ```
 
 ## Switch
