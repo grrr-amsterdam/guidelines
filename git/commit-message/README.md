@@ -3,7 +3,7 @@
 ## Message format
 
 - Stick to a 72 character limit for your commit message
-- Always start your message with one of the following imperatives: `update`, `fix`, `add` or `remove`.
+- Always start your message with one of the following imperatives: `Update`, `Fix`, `Add` or `Remove`.
 - Separate the subject line from the body using a blank line
 - End the message with a line containing only the ticket number whenever possible, like so: `AC-323` (in case of ActiveCollab).
 - Use the body to elaborate: why was this change necessary? What subtasks have been done to facilitate this change?
@@ -26,7 +26,7 @@ Aside from the commit message *format*, there are other rules to keep in mind:
 Fixing a bug:
 
 ```
-fix encoding issue in newsletter form validation
+Fix encoding issue in newsletter form validation
 
 This fixes the issue that occurred whenever senior hax0rs tried filling out the newsletter form.
 - Enforced encoding to UTF-8
@@ -41,7 +41,7 @@ AC-395
 Updating a dependency:
 
 ```
-update gizzle-muffle-keeper to 1.4.5
+Update gizzle-muffle-keeper to 1.4.5
 
 Due to a security concern, update to latest version was necessary.
 - Updated related unit test to new format
