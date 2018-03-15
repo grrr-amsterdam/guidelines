@@ -3,7 +3,11 @@
 ## Message format
 
 - Stick to a 72 character limit for your commit message
-- Always start your message with one of the following imperatives: `Update`, `Fix`, `Add` or `Remove`.
+- Always start your message with one of the following imperatives: 
+  - `Update`
+  - `Fix`
+  - `Add`
+  - `Remove`
 - Separate the subject line from the body using a blank line
 - End the message with a line containing only the ticket number whenever possible, like so: `AC-323` (in case of ActiveCollab).
 - Use the body to elaborate: why was this change necessary? What subtasks have been done to facilitate this change?
