@@ -59,7 +59,7 @@ Just use spaces.
 
 ## Line-length
 Try to keep your lines readable. 
-We stick to a line limit of 72 characters, but we do not enforce it - in case of urls and such.
+We stick to a line limit of 100 characters, but we do not enforce it - in case of urls and such.
 
 Use [Husky](https://www.npmjs.com/package/husky) for hooks whenever possible.
 
@@ -106,6 +106,25 @@ function fetchFiltered(array $params) {
 
 See also ["Introduce Parameter Object"](http://sourcemaking.com/refactoring/introduce-parameter-object).
 
+## Argument line distribution
+
+When calling function and spreading arguments over multiple lines, you should place _all_ arguments on a separate line, not some. 
+Especially not when the first argument is a closure or array and the second a wee scalar value.
+
+```php
+// NOT LIKE THIS:
+doTheThing(function ($foo) {
+  return $this->manipulateTheVar($foo);
+}, $poo);
+
+// LIKE THIS:
+doTheThing(
+  function ($foo) {
+    return $this->manipulateTheVar($foo);
+  },
+  $poo
+);
+```
 
 ## Arrays
 Try to write array/object/dictionary properties on new lines:
@@ -154,7 +173,28 @@ if (!array_key_exists('Leonardo', $ninjaTurtles)) {
 ```
 
 ## Names
+
 We prefer `CamelCase` for identifiers, but in Ruby you are allowed to use the underscored notation.
+
+## Don't abbreviate
+
+In general, prefer longer variable and method names over short variable names. 
+This is not algebra, we're not trying to find `x`. 
+
+Usually there's a proper semantic name for whatever value you're working with.
+
+## Comments
+
+Comments are added with the best of intentions, obviously. But take a moment to consider wether you can make the code self-explanatory before adding a comment. Maybe your variable names are ambiguous? Maybe your function parameters can be made a little bit more clear?
+
+If you absolutely must, write a clear comment, use proper capitalisation and punctuation. We're not bloody animals.
+
+## Functional programming
+
+No hard and fast rules here, but try to stick to the following:
+
+- Prefer maps/filters/reductions over looping
+- Prefer immutable data
 
 ## Object Calisthenics
 
@@ -232,15 +272,3 @@ function getBreakfast() {
 }
 ```
 
-## Don't abbreviate
-
-In general, prefer longer variable and method names over short variable names. 
-This is not algebra, we're not trying to find `x`. 
-
-Usually there's a proper semantic name for whatever value you're working with.
-
-## Comments
-
-Comments are added with the best of intentions, obviously. But take a moment to consider wether you can make the code self-explanatory before adding a comment. Maybe your variable names are ambiguous? Maybe your function parameters can be made a little bit more clear?
-
-If you absolutely must, write a clear comment, use proper capitalisation and punctuation. We're not bloody animals.
