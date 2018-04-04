@@ -21,6 +21,18 @@ $foo = 'Hello ' . $username . ', such nice weather today.';
 ?>
 ```
 
+## Class member order
+
+Place class members in the following order:
+
+- Any used traits
+- class constants
+- public class properties
+- private/protected class properties
+- class constructor
+- public methods
+- private/protected methods
+
 ## Zend Framework Controller actions
 In order to keep it simple (stupid), please refrain from using anything other than lowercase alphanumeric characters in your controller actions. 
 So use thankyouAction instead of thankYouAction.
