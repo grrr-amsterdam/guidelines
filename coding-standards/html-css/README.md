@@ -189,5 +189,5 @@ Some examples of where comments are a necessity:
 
 ### Accessibility
 
-Web accessibility is important to us. Please comply to at least [WCAG2.0](https://www.w3.org/TR/WCAG20/) level
+Web accessibility is important to us. Please comply to at least [WCAG2.0](https://www.w3.org/TR/WCAG20/) level A
 
