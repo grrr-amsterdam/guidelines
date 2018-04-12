@@ -4,6 +4,7 @@ Author: Mattijs Bliek
 
 ### Writing style
 
+- Use SCSS syntax, not Sass syntax
 - Use 4 spaces to indent stuff
 - Write single line CSS
 - Limit your lines to 80 characters. If you need to split up lines, bundle related properties.
@@ -124,23 +125,23 @@ The one exception to this rule is selectors for [state classes](#states), which 
 
 ```css
 /* bad */
-.block-list { 
-  padding: 20px; background: #ddd; 
+.block-list {
+  padding: 20px; background: #ddd;
 }
 
-.block-list .event { 
-  margin-bottom: 30px; 
+.block-list .event {
+  margin-bottom: 30px;
 }
 ```
 
 ```css
 /* good */
-.block-list { 
-  padding: 20px; background: #ddd; 
+.block-list {
+  padding: 20px; background: #ddd;
 }
 
-.block-list__event { 
-  margin-bottom: 30px; 
+.block-list__event {
+  margin-bottom: 30px;
 }
 ```
 
@@ -168,3 +169,25 @@ Some examples of where comments are a necessity:
 - When increasing specificity by doubling a selector
 - When stripping whitespace because you're using inline block
 - When writing workarounds for specific browsers
+
+
+## Front-end guidelines
+
+### Assets
+
+- Only use open source fonts or fonts with a license
+- Preload webfonts
+- Don't load font weights or variants that won't be used
+- Use our [SVG helper](https://github.com/grrr-amsterdam/garp_scaffold/blob/master/application/modules/default/views/helpers/Svg.php) for including SVGs
+- Don't use icon fonts
+
+### Performance
+
+- Lazy load media embeds from Youtube, Vimeo, SoundCloud etc.
+- Use responsive images
+- Use cheap CSS animations or transitions (transforms, opacity).
+
+### Accessibility
+
+Web accessibility is important to us. Please comply to at least [WCAG2.0](https://www.w3.org/TR/WCAG20/) level
+
