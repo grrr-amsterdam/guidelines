@@ -14,7 +14,7 @@ class Garp_FiddleStick {
             doSomething();
         }
         $this->_property = $foo;
-        
+
         if ($bar) {
             $this->_id = 1000 + $bar;
         }
@@ -29,7 +29,7 @@ class Garp_FiddleStick {
 ```
 
 ## Indentation
-We use spaces for indentation. 
+We use spaces for indentation.
 * 2 spaces for Javascript
 * 4 spaces for the rest
 
@@ -54,11 +54,11 @@ $orange = 'Michaelangelo';
 $purple = 'Donatello';
 ```
 
-Just use spaces. 
+Just use spaces.
 (a good Vim plugin to help with this is [Tabular](https://github.com/godlygeek/tabular))
 
 ## Line-length
-Try to keep your lines readable. 
+Try to keep your lines readable.
 We stick to a line limit of 100 characters, but we do not enforce it - in case of urls and such.
 
 Use [Husky](https://www.npmjs.com/package/husky) for hooks whenever possible.
@@ -108,7 +108,7 @@ See also ["Introduce Parameter Object"](http://sourcemaking.com/refactoring/intr
 
 ## Argument line distribution
 
-When calling function and spreading arguments over multiple lines, you should place _all_ arguments on a separate line, not some. 
+When calling function and spreading arguments over multiple lines, you should place _all_ arguments on a separate line, not some.
 Especially not when the first argument is a closure or array and the second a wee scalar value.
 
 ```php
@@ -178,8 +178,8 @@ We prefer `CamelCase` for identifiers, but in Ruby you are allowed to use the un
 
 ## Don't abbreviate
 
-In general, prefer longer variable and method names over short variable names. 
-This is not algebra, we're not trying to find `x`. 
+In general, prefer longer variable and method names over short variable names.
+This is not algebra, we're not trying to find `x`.
 
 Usually there's a proper semantic name for whatever value you're working with.
 
