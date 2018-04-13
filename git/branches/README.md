@@ -52,7 +52,7 @@ You can now deploy the new tag to production.
   - `git add .` But don't commit!
   - `git rebase --continue`
 - If there's a remote tracking your branch, use `git push --force-with-lease`. Only force-push if you're sure there's nobody else working on the same branch!
-- Note: git will complain about being diverged everything you change history (whenever you amend a commit or rebase a branch). It will suggest you should pull then push, but DO NOT PULL. It's YOUR feature branch, you know nobody else has worked on it. If not, you shouldn't be changing history.
+- Note: git will complain about being diverged every time you change history (whenever you amend a commit or rebase a branch). It will suggest you should pull then push, but DO NOT PULL. It's YOUR feature branch, you know nobody else has worked on it. If not, you shouldn't be changing history.
 
 ## Cleaning up your branch
 
