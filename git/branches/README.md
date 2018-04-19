@@ -1,5 +1,26 @@
 # Git branches
 
+## One Flow
+
+We use the [One Flow](http://endoflineblog.com/oneflow-a-git-branching-model-and-workflow) model for organizing branches. There's but a single long-running branch, `master`.
+From there we branch off to create _feature_ branches and _hotfix_ branches. We use git tags extensively to mark deployable commits. 
+
+Hotfixes usually increment the patch point of the current version they branched from, AKA they go from `3.12.1` to `3.12.2`.  
+Releases made from `master` increase either the minor or the major point, depending on their nature, for instance from `3.12.2` to `3.13.0`.
+
+The following two aliases might help to get the system right.  
+The `hotfix` one especially helps to not forget to branch off a point in the past when creating a hotfix branch.
+
+```
+[alias]
+  feature = "!f() { git checkout -b 'feature/'$(git config user.name | cut -d' ' -f1 | awk '{print tolower($0)}')'-'$1; }; f"
+  hotfix = "!f() { [ x$# != x2 ]&&echo "Two arguments required!" >&2 || git checkout -b 'hotfix/'$(git config user.name | cut -d' ' -f1 | awk '{print tolower($0)}')'-'$1 $2; }; f"
+
+```
+
+Note that we like to prefix branches using the name of the author, to see at a glance who to ask about branches.
+
+
 ## Pulling changes
 
 Whenever you have local commits, but the remote also includes new work, you have diverged.
