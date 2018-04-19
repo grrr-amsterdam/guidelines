@@ -87,3 +87,7 @@ Note: see the general advice above in the **Rebasing** section about force-pushi
 Note: you can swap the order of commits by simply reordering them in the rebase file.
 
 Note: if you want to edit a commit message, you have to choose `reword`. Changing the commit message directly in the rebase file won't work. You will be prompted for a new message after saving the rebase file.
+
+---------------------
+
+For older projects, take a look at [our Git Flow setup](git-flow/README.md). 
