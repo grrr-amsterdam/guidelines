@@ -41,12 +41,16 @@ $ /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/inst
 
 ## Sudo-less Gems
 Starting from MacOS High Sierra, you need a home for your gems.
+Otherwise you might need `sudo` to install gems, and you don't want that.
 Put this in your `~/.bash_profile` or alike:
 
 ```bash
 export GEM_HOME=~/.gem
 export PATH=$PATH:$GEM_HOME/bin
 ```
+
+Now you can just use `gem install` without extra permissions.
+You should never need `sudo` for this!
 
 
 ## Node and Composer paths
