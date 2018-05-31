@@ -10,7 +10,7 @@ $ ssh-keygen
 
 Load it in your `~/.bash_profile` or alike:
 ```bash
-ssh-add ~/.ssh/id_rsa > /dev/null 2>&1
+ssh-add -K ~/.ssh/id_rsa > /dev/null 2>&1
 ```
 
 Source it to activate in the current session:
