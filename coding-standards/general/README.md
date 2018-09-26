@@ -157,7 +157,7 @@ Also, remember that cool kids use [Replace Conditional With Polymorphism](http:/
 
 ## Curlies
 
-Even though it's allowed to omit curly braces for one-liners, we generally prefer not to use them.
+Even though it's allowed to omit curly braces for one-liners, we generally prefer to always use them.
 
 ```php
 if (!array_key_exists('Leonardo', $ninjaTurtles)) array_push($ninjaTurtles, 'Leonardo');
