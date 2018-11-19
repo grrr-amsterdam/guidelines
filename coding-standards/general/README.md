@@ -272,3 +272,12 @@ function getBreakfast() {
 }
 ```
 
+#### Conditional assignment
+
+By extension, use a ternary operator when assigning a variable to one or another value:
+
+```js
+const foo = yepNope ? 42 : 84;
+```
+
+It's immediately clear this is a single statement, being the assignment, whereas an `if` / `else` statement requires you to inspect the contents of the different blocks to see what's going on.
