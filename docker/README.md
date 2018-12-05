@@ -2,9 +2,6 @@
 
 At Grrr, we use Docker for local development and more. This ensures development-production parity, and prevents a lot of manual configuration work.
 
-This file is written for MacOS, but with some minor changes it should work for Linux and Windows as well.
-We use Unison for high performance syncing, which is compatible with MacOS, Linux and Windows.
-
 
 
 First, make sure you [prepared your OS](os-setup/README.md).
