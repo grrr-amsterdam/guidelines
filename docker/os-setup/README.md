@@ -4,16 +4,19 @@
 
 - Install the [Docker client](https://www.docker.com/community-edition#/download)
 
-- Make sure you have the dependencies for syncing files via _Unison_:
 
-  ```bash
-  $ brew install unison
-  $ brew install eugenmayer/dockersync/unox
-  ```
+## NFS on MacOS
+We use NFS to speed up file synchronization between host and container.
+If you're running MacOS, NFS is not as fast as you'd like, out of the box.
 
-  You now should be able to call `unison-fsmonitor` as an executable.
+You can use the following tweak to speed it up a little.
 
-  ​
+Add the following lines to `/etc/nfs.conf`:
+```
+nfs.client.allow_async = 1
+nfs.client.nfsiod_thread_max = 128
+```
+
 
 ## The `dock` shortcut to run Docker commands
 Install the shortcut below in your shell to shorten the syntax to run commands on your running `web` container.
