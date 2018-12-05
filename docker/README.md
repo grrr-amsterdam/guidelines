@@ -13,7 +13,7 @@ In case you run into problems, refer to the [troubleshooting chapter](troublesho
 ## Start your project
 
 - `cd` into to the project directory.
-- Run `docker compose up`
+- Run `docker-compose up`
 - Now you can run the site on [localhost](http://localhost), optionally followed by a port number if you have defined one in `docker-compose.yml`.
 
 
