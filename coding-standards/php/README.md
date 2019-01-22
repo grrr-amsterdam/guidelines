@@ -66,7 +66,7 @@ $b->doSomething();
 ?>
 ```
 
-The output of that script is "hello, this is B", instead of "hello, this is A", which you'd maybe expect. 
+The output of that script is "hello, this is A", instead of "hello, this is B", which you'd maybe expect. 
 The culprit in this case is the self keyword. self refers to the class in which it is defined. In order to change the above example to match your expectations you should either copy the entire method to class B, since the mention of self in class B would point it to B.
 
 But copying code should always be a last resort. PHP 5.3 gives us a new, better keyword to solve this problem: static.
