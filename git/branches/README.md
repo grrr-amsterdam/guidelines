@@ -77,7 +77,7 @@ You can now deploy the new tag to production.
 
 ## Cleaning up your branch
 
-💡 Pro-tip: grab this git alias to drop into interactive rebase starting at the first commit of your branch: [https://github.com/harmenjanssen/dotfiles/blob/master/gitconfig#L46](https://www.google.com/url?q=https%3A%2F%2Fgithub.com%2Fharmenjanssen%2Fdotfiles%2Fblob%2Fmaster%2Fgitconfig%23L46&sa=D&sntz=1&usg=AFQjCNHIM7wYxfEHyqlfOgI3KMeoIO-4lA)
+💡 Pro-tip: grab the `rbi` git alias to drop into interactive rebase starting at the first commit of your branch: [https://github.com/harmenjanssen/dotfiles/blob/master/gitconfig](https://github.com/harmenjanssen/dotfiles/blob/master/gitconfig)
 
 For example `git rbi master` would find the commit where you branched off `master` and allows you to rebase all commits from that point on.
 
