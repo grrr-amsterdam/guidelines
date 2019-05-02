@@ -20,7 +20,7 @@ Aside from the commit message *format*, there are other rules to keep in mind:
 
 - Avoid commits like "Fix whitespace", "Add documentation", "Add unit test", "Fix styles". If that's all there is to a commit, by all means describe it as such, but 9 times out of 10 these commits can be squashed into more descriptive commits.
 - Just like when coding, adhere to the single responsibility principle. Make sure your commit does *one* thing well. If you've already made multiple changes and forgot to commit, simply use `git add --patch` to stage a subset of changes in a file.
-- Similarly, when committing changes that should've been part of a previous commit, use `git commit --fixup` and `git rebase -i` to quickly append your changes to any previous commit. See for more info on this technique: [https://robots.thoughtbot.com/autosquashing-git-commits](https://www.google.com/url?q=https%3A%2F%2Frobots.thoughtbot.com%2Fautosquashing-git-commits&sa=D&sntz=1&usg=AFQjCNEw94nfXJ5K92v8eenzZQkFUvMLlQ)
+- Similarly, when committing changes that should've been part of a previous commit, use `git commit --fixup` and `git rebase -i` to quickly append your changes to any previous commit. See for more info on this technique: [https://robots.thoughtbot.com/autosquashing-git-commits](https://robots.thoughtbot.com/autosquashing-git-commits)
 
 
 
