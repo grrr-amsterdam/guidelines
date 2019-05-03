@@ -2,7 +2,7 @@
 
 ## Formatting your code
 
-First things first: take a look at [the general coding standards](coding-standards-general) to make yourself familiar with the recommended coding style.
+First things first: take a look at [the general coding standards](../general) to make yourself familiar with the recommended coding style.
 
 ## General flow of operations
 
