@@ -12,7 +12,7 @@ Our guidelines and best practices for development and everything around it.
 - We [deploy](deployment/README.md) our work to publish it to the world.
 - We set up our [servers](server/README.md) to run as smoothly as possible.
 - We [monitor](monitoring/README.md) our work to make sure everything keeps running.
-
+- We [share knowledge](https://grrr.tech) with the community on our blog.
 
 ## Contributing
 Please use relative links when referring to other documents in these repository.
