@@ -61,6 +61,35 @@ Let's say the current production version is tagged `1.50.4` and you've found a c
 
 You can now deploy the new tag to production.
 
+## Accidentally created a feature instead of a hotfix?
+
+`git rebase` is here to rescue you. With `git rebase --onto` you can rebase your feature branch onto a released tag, which makes it a hotfix.
+
+To make it visual this is your situation:
+
+```
+   o---o---o---o---o  v1.0.0-release
+	\
+	 o---o---o---o---o  master
+			  \
+			   o---o---o  feature/branch
+```
+
+After running `git rebase --onto v1.0.0-release master feature/branch` you get this structure:
+
+```
+   o---o---o---o---o  v1.0.0-release
+       |            \
+       |             o'--o'--o'  feature/branch
+	\
+	 o---o---o---o---o  master
+
+```
+
+Changing the branch name will result in a new PR on GitHub. When that's not desired you have to leave the branch name like this. Adding a clear commit in the PR will do.
+
+`git help rebase` and ([git-scm.com])(https://git-scm.com/docs/git-rebase) contain more examples covering `--onto`.  
+
 ## Rebasing
 
 - You're working on a feature branch
