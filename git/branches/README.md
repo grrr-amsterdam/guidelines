@@ -88,7 +88,7 @@ After running `git rebase --onto v1.0.0-release master feature/branch` you get t
 
 Changing the branch name will result in a new PR on GitHub. When that's not desired you have to leave the branch name like this. Adding a clear commit in the PR will do.
 
-`git help rebase` and ([git-scm.com])(https://git-scm.com/docs/git-rebase) contain more examples covering `--onto`.  
+`git help rebase` and [git-scm.com](https://git-scm.com/docs/git-rebase) contain more examples covering `--onto`.  
 
 ## Rebasing
 
