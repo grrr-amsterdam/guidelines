@@ -24,6 +24,8 @@ Here, another tag (`1.2.3-release`) is added to the same commit that was already
 
 We use `-release` as a convention to indicate to Travis that this version should be deployed to `production`. The auto-deploy mechanism will run all tests again and if successful, the latest version will be live shortly thereafter.
 
+[Check the blog to see how this actually works, and how you can set it up for new projects](https://grrr.tech/posts/auto-deploy-with-travis-ci/)
+
 ### Failed deploys
 
 Should the automatic deploy to `production` fail for some reason, it's advisable to use the "Restart Build" functionality in Travis.
