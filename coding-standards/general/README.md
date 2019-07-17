@@ -39,7 +39,7 @@ An example for why we use spaces instead of tabs is for instance this docblock:
 ```php
 /**
  * @param array $data      Content of new record
- * @param bool  $overwrite Wether to overwrite existing records.
+ * @param bool  $overwrite Whether to overwrite existing records.
  */
 ```
 
@@ -63,12 +63,14 @@ We stick to a line limit of 100 characters, but we do not enforce it - in case o
 
 Use [Husky](https://www.npmjs.com/package/husky) for hooks whenever possible.
 
-In Vim you can enforce this/make this more visible using:
+In __Vim__ you can enforce this/make this more visible using:
 
 ```
 set textwidth=100
 set colorcolumn=+1
 ```
+
+In __Atom__ you can make this visible by setting `Preferred Line Length` to `100` under `Settings > Editor`.
 
 ## Private methods
 
@@ -185,7 +187,7 @@ Usually there's a proper semantic name for whatever value you're working with.
 
 ## Comments
 
-Comments are added with the best of intentions, obviously. But take a moment to consider wether you can make the code self-explanatory before adding a comment. Maybe your variable names are ambiguous? Maybe your function parameters can be made a little bit more clear?
+Comments are added with the best of intentions, obviously. But take a moment to consider whether you can make the code self-explanatory before adding a comment. Maybe your variable names are ambiguous? Maybe your function parameters can be made a little bit more clear?
 
 If you absolutely must, write a clear comment, use proper capitalisation and punctuation. We're not bloody animals.
 
