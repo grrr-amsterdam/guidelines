@@ -216,7 +216,7 @@ Never couple JavaScript and CSS. If you need a class as an anchor for your javas
 
 If you have a module called `.event`, there should be a corresponding `event.css` (or Sass equivalent) file. Preferably, there should also be an HTML file to match.
 
-In the file `event.css`, all selectors should start with `.event`, eg. `.event__body` or `.event h1`. Using other module selectors makes the modules dependant on each other and no longer modular.
+In the file `event.css`, all selectors should start with `.event` or `.event__*`, eg. `.event__body` or `.event h1`. Using other module selectors makes the modules dependant on each other and no longer modular.
 
 The one exception to this rule is selectors for global [state classes](#states), which can be used throughout your application.
 
