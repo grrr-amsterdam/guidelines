@@ -18,22 +18,24 @@ nfs.client.nfsiod_thread_max = 128
 ```
 
 
-## The `dock` shortcut to run Docker commands
-Install the shortcut below in your shell to shorten the syntax to run commands on your running `web` container.
+## The `dce` shortcut to run Docker commands
+Install the shortcut below in your shell to shorten the syntax to run commands on your running containers.
 Now, instead of:
 ```bash
-$ docker exec -it myproject_web_1 [command]
+$ docker-compose exec web [command]
 ```
 You can run:
 ```bash
-$ dock [command]
+$ dce web [command]
 ```
 For instance:
 ```bash
-$ dock ls
-$ dock bash
-$ dock g spawn
-$ dock g snippet create
+$ dce web ls
+$ dce web bash
+$ dce web g spawn
+$ dce web g snippet create
+$ dce web phpunit
+$ dce db mysql -uroot -p
 ```
 
 
@@ -42,15 +44,15 @@ $ dock g snippet create
 
 For in your `~/.bash_profile`:
 ```bash
-function dock {
-    docker exec -it ${PWD##*/}_web_1 "$@"
+function dce {
+    docker-compose exec "$@"
 }
 ```
 ### Fish shell
-Add this function with `funced dock` and then save with `funcsave dock`.
+Add this function with `funced dce` and then save with `funcsave dce`.
 ```bash
-function dock
-    docker exec -it (basename $PWD)_web_1 $argv
+function dce
+    docker-compose exec $argv
 end
 ```
 
