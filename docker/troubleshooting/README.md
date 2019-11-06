@@ -21,14 +21,13 @@ _Remove the dollar signs for Fish shell._
 ```bash
 $ docker-compose stop
 $ docker stop $(docker ps -a -q)
-$ docker-sync-stack start
+$ docker-compose up
 ```
 
 ### Snafu'er than Snafu ☠️
 If everything is still failing and you're close to insanity, you can try this collection of hardcore methods. Be prepared to lose all of your (database) data though:
 ```bash
-$ docker-compose stop
-$ docker-sync-stack clean
+$ docker-compose down
 $ docker stop $(docker ps -a -q)
 $ docker rm -f $(docker ps -a -q)
 $ docker rmi -f $(docker images -q)
@@ -47,12 +46,8 @@ If you have done an `npm install` before on your host system (f.i. OSX), these a
 Solution is to compile again inside the container:
 ```bash
 $ rm -rf node_modules
-$ dock npm i
+$ docker-compose exec web npm i
 ```
-
-## Can't reach host
-* Is Docker running?
-* Are you using the right IP address? In the Docker for Mac (beta / edge) client this is `localhost` by default, in the older Docker-machine client this is `192.168.99.100`.
 
 ## MySQL error
 MySQL at it again 🙄
