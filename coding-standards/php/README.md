@@ -103,9 +103,9 @@ To make code easier to update, we prefer to list `use` statements in alphabetica
 
 ```php
 // Avoid:
-use Garp\Functional as f;
 use Illuminate\Routing\{Router, Route};
 use Illuminate\Http\Request;
+use Garp\Functional as f;
 ```
 
 ```php
