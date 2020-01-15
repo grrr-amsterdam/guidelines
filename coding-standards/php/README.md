@@ -96,3 +96,22 @@ $b->doSomething();
 ```
 
 It is therefore recommended to prefer static over self, since it allows future subclassing.
+
+## Use statements
+
+To make code easier to update, we prefer to list `use` statements in alphabetical order, and avoid compound statements.
+
+```php
+// Avoid:
+use Garp\Functional as f;
+use Illuminate\Routing\{Router, Route};
+use Illuminate\Http\Request;
+```
+
+```php
+// Prefer:
+use Garp\Functional as f;
+use Illuminate\Http\Request;
+use Illuminate\Routing\Route;
+use Illuminate\Routing\Router;
+```
