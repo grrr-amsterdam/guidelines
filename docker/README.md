@@ -14,7 +14,7 @@ In case you run into problems, refer to the [troubleshooting chapter](troublesho
 
 - `cd` into to the project directory.
 - Run `docker-compose up`
-- Now you can run the site on <projectname>.localhost` for Traefik-enabled projects, or simply `localhost` on a specific port for older projects.
+- Now you can run the site on {projectname}.localhost` for Traefik-enabled projects, or simply `localhost` on a specific port for older projects.
   
 ## Overview of services
 
@@ -34,7 +34,7 @@ Conventionally, these are the services in use:
   - Example commands you would run here:
     - `$ dce db mysql -uroot -psecret my_database`
     - `$ dce db mysqldump -uroot -psecret my_database > my_data.sql`
-- **router** - A [Traefik](https://containo.us/traefik/)-running container that provides routing for your app. We configure this router to enable <projectname>.localhost. It also provides a neat dashboard with an overview of running containers at [localhost:8080](http://localhost:8080).
+- **router** - A [Traefik](https://containo.us/traefik/)-running container that provides routing for your app. We configure this router to enable {projectname}.localhost. It also provides a neat dashboard with an overview of running containers at [localhost:8080](http://localhost:8080).
 - **builder** - A container running node and yarn, used to build your front-end assets.
   - Example commands you would run here:
     - `$ dcr builder yarn install`
