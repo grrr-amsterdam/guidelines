@@ -18,7 +18,7 @@ nfs.client.nfsiod_thread_max = 128
 ```
 
 
-## The `dce` shortcut to run Docker commands
+## The `dce` and `dcr` shortcuts to run Docker commands
 Install the shortcut below in your shell to shorten the syntax to run commands on your running containers.
 Now, instead of:
 ```bash
@@ -38,7 +38,13 @@ $ dce web phpunit
 $ dce db mysql -uroot -p
 ```
 
+For containers that are not running processes, you use `docker-compose run` instead of `docker-compose exec`. 
 
+Add a `dcr` shortcut to allow easy access to this command, so you can run for instance:
+
+```bash
+$ dcr deploy cap staging deploy
+```
 
 ### Bash
 
@@ -47,12 +53,20 @@ For in your `~/.bash_profile`:
 function dce {
     docker-compose exec "$@"
 }
+
+function dcr {
+    docker-compose run "$@"
+}
 ```
 ### Fish shell
 Add this function with `funced dce` and then save with `funcsave dce`.
 ```bash
 function dce
     docker-compose exec $argv
+end
+
+function dcr
+    docker-compose run $argv
 end
 ```
 
