@@ -10,12 +10,43 @@ In case you run into problems, refer to the [troubleshooting chapter](troublesho
 
 
 
-## Start your project
+## Quickstart
 
 - `cd` into to the project directory.
 - Run `docker-compose up`
-- Now you can run the site on [localhost](http://localhost), optionally followed by a port number if you have defined one in `docker-compose.yml`.
+- Now you can run the site on <projectname>.localhost` for Traefik-enabled projects, or simply `localhost` on a specific port for older projects.
+  
+## Overview of services
 
+The following is an overview of the containers used in our preferred setup. Note that this might not yet be available in _all_ projects.
+
+(the example commands below assume you've added [these conventional shortcuts](os-setup/README.md#the-dce-and-dcr-shortcuts-to-run-docker-commands))
+
+Conventionally, these are the services in use:
+
+- **web** - The Apache server (connected to FPM for PHP).
+- **php** - Container running FPM. Execute your PHP commands here. Ships with Composer.
+  - Example commands you would run here:
+    - `$ dce php phpunit`
+    - `$ dce php php artisan`
+    - `$ dce php composer install`
+- **db** - Container running the MySQL database. Use this to execute queries.
+  - Example commands you would run here:
+    - `$ dce db mysql -uroot -psecret my_database`
+    - `$ dce db mysqldump -uroot -psecret my_database > my_data.sql`
+- **router** - A [Traefik](https://containo.us/traefik/)-running container that provides routing for your app. We configure this router to enable <projectname>.localhost. It also provides a neat dashboard with an overview of running containers at [localhost:8080](http://localhost:8080).
+- **builder** - A container running node and yarn, used to build your front-end assets.
+  - Example commands you would run here:
+    - `$ dcr builder yarn install`
+    - `$ dcr builder yarn watch`
+  - _Note that since this is not a running container, you use `docker-compose run` instead of `docker-compose exec`!_
+- **deploy** - A container running ruby, node and capistrano, used to deploy your project.
+  - Example commands you would run here:
+    - `$ dcr deploy cap staging deploy`
+  - _Note that since this is not a running container, you use `docker-compose run` instead of `docker-compose exec`!_
+
+
+[See an example docker-compose.yml file and learn how to setup your project this way](docker-setup)
 
 
 ## Stop your project
