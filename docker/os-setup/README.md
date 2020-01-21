@@ -70,11 +70,3 @@ function dcr
 end
 ```
 
-
-## Add convenience hostname
-
-- Optionally, you can add the Docker database host (we use `db` for convention) to your local nameserver, so you can address it with this name instead of an IP address.
-
-  Add the following line to `/etc/hosts`:
-  `127.0.0.1 db`
-
