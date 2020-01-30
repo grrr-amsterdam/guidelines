@@ -2,13 +2,10 @@
 
 At Grrr, we use Docker for local development and more. This ensures development-production parity, and prevents a lot of manual configuration work.
 
-
 First, make sure you [prepared your OS](os-setup/README.md).
 Then [set up your project](project-setup/README.md) to use our Docker configuration.
 
 In case you run into problems, refer to the [troubleshooting chapter](troubleshooting/README.md).
-
-
 
 ## Quickstart
 
@@ -48,7 +45,14 @@ Conventionally, these are the services in use:
 
 [See an example docker-compose.yml file and learn how to setup your project this way](docker-setup)
 
+## Detached mode
+
+To run the containers in the background you can use the `-d` flag: `docker-compose up -d`.
+
+Follow the logs of the php container run `docker-compose logs -f php`. To follow the logs of all the containers omit the container name.
 
 ## Stop your project
 
 Use `CTRL + C` in a running Docker window to stop both.
+
+When running in detached mode do `docker-compose stop` in your project folder. This won't throw away the containers. To do that run `docker-compose down`, but stop is usually what you want.
