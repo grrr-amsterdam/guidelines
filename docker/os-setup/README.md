@@ -6,7 +6,8 @@
 
 
 ## NFS on MacOS
-We use NFS to speed up file synchronization between host and container.
+We use NFS to speed up file synchronization between host and container. To enable NFS for Docker read [this Medium article by Sean Handley](https://medium.com/@sean.handley/how-to-set-up-docker-for-mac-with-native-nfs-145151458adc).
+
 If you're running MacOS, NFS is not as fast as you'd like, out of the box.
 
 You can use the following tweak to speed it up a little.
