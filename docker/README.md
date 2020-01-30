@@ -12,6 +12,18 @@ In case you run into problems, refer to the [troubleshooting chapter](troublesho
 - `cd` into to the project directory.
 - Run `docker-compose up`
 - Now you can run the site on {projectname}.localhost` for Traefik-enabled projects, or simply `localhost` on a specific port for older projects.
+
+## Multiple Docker projects
+
+We use Traefik to run the site on a nice domain. When you run multiple projects with Traefik all those containers try to claim port 80. That's not possible and you will get this error:
+
+> ERROR: for router  Cannot start service router: driver failed programming external connectivity on endpoint ... Bind for 0.0.0.0:xx failed: port is already allocated
+
+There some solutions:
+
+1. Stop the other project
+2. Change the port mapping of the Traefik container
+3. Don't use Traefik, add a port mapping to the web container and use localhost:your-port
   
 ## Overview of services
 
