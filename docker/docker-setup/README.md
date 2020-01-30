@@ -180,7 +180,7 @@ ENV PATH $PATH:./vendor/bin
 
 ## `add-reverse-proxy-host.sh`
 
-```shell script
+```Shell
 #!/bin/sh
 # @author       David Spreekmeester <david@grrr.nl>
 # @description  Solaris shell script to add a mock localhost entry to a container,
