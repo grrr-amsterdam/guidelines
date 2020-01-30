@@ -211,3 +211,4 @@ echo "${REV_PROXY_IP} ${REV_PROXY_DOMAIN}" >> /etc/hosts
 [TO DO]
 
 - httpd.conf?
+- fpm.conf
