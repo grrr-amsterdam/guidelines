@@ -12,6 +12,18 @@ Or if there's another Docker Compose instance running, `cd` to that project dir 
 $ docker-compose stop
 ```
 
+### Traefik
+
+Because every project has it's own Traefik container binding to port 80 starting multiple isn't possible:
+
+> ERROR: for router  Cannot start service router: driver failed programming external connectivity on endpoint ... Bind for 0.0.0.0:xx failed: port is already allocated
+
+Some possible solutions:
+
+1. Stop the other project: `$ docker-compose stop`
+2. Change the port mapping of the Traefik container
+3. Don't use Traefik, add a port mapping to the web container and use localhost:your-port
+
 ## Everything SNAFU
 If a machine is stuck and won't shut down, try stopping all containers first.
 Then restart the Docker Compose cluster. You shouldn't be losing any data this way.
