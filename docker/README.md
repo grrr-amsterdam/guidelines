@@ -12,18 +12,6 @@ In case you run into problems, refer to the [troubleshooting chapter](troublesho
 - `cd` into to the project directory.
 - Run `docker-compose up`
 - Now you can run the site on {projectname}.localhost` for Traefik-enabled projects, or simply `localhost` on a specific port for older projects.
-
-## Multiple Docker projects
-
-We use Traefik to run the site on a nice domain. When you run multiple projects with Traefik all those containers try to claim port 80. That's not possible and you will get this error:
-
-> ERROR: for router  Cannot start service router: driver failed programming external connectivity on endpoint ... Bind for 0.0.0.0:xx failed: port is already allocated
-
-There some solutions:
-
-1. Stop the other project
-2. Change the port mapping of the Traefik container
-3. Don't use Traefik, add a port mapping to the web container and use localhost:your-port
   
 ## Overview of services
 
@@ -43,7 +31,7 @@ Conventionally, these are the services in use:
   - Example commands you would run here:
     - `$ dce db mysql -uroot -psecret my_database`
     - `$ dce db mysqldump -uroot -psecret my_database > my_data.sql`
-- **router** - A [Traefik](https://containo.us/traefik/)-running container that provides routing for your app. We configure this router to enable {projectname}.localhost. It also provides a neat dashboard with an overview of running containers at [localhost:8080](http://localhost:8080).
+- **router** - A [Traefik](https://containo.us/traefik/)-running container that provides routing for your app. We configure this router to enable {projectname}.localhost. It also provides a neat dashboard with an overview of running containers at [localhost:8080](http://localhost:8080). Be aware that this container binds to port 80 so can only run one container.
 - **builder** - A container running node and yarn, used to build your front-end assets.
   - Example commands you would run here:
     - `$ dcr builder yarn install`
