@@ -38,6 +38,22 @@ To enforce a pull of the latest used Docker images:
 $ docker-compose pull
 ```
 
+This won't update the `FROM` images in the custom Dockerfiles. You have pull them manually:
+
+```
+$ docker pull image-name
+```
+
+## Elastic
+
+Elastic search containers use a lot of memory. Something with Java... Running multiple of them will hang Docker of your computer. Prevent multiple Elastic search containers from running symultatiosly. Stop the projects you're not working on. Or stop the Elastic container of your current project to reduce resource usage:
+
+```
+$ docker-compose stop elasticsearch kibana
+```
+
+Service name can differ, you can find them in `docker-compose.yml`.
+
 ## Node commands are choking on system dependencies
 If you have done an `npm install` before on your host system (f.i. OSX), some binaries might not be compiled for the right system inside the web server (Debian). 
 
