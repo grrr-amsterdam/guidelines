@@ -58,7 +58,7 @@ $ docker pull image-name
 
 ## Elastic
 
-Elastic search containers use a lot of memory. Something with Java... Running multiple of them will hang Docker of your computer. Prevent multiple Elastic search containers from running symultatiosly. Stop the projects you're not working on. Or stop the Elastic container of your current project to reduce resource usage:
+Elastic search containers use a lot of memory. Something with Java... Running multiple of them will hang Docker of your computer. Prevent multiple Elastic search containers from running simultaneously. Stop the projects you're not working on. Or stop the Elastic container of your current project to reduce resource usage:
 
 ```
 $ docker-compose stop elasticsearch kibana
