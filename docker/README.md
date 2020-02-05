@@ -1,6 +1,6 @@
 # Docker
 
-At Grrr, we use Docker for local development and more. This ensures development-production parity, and prevents a lot of manual configuration work.
+At GRRR, we use Docker for local development and more. This ensures development-production parity, and prevents a lot of manual configuration work.
 
 First, make sure you [prepared your OS](os-setup/README.md).
 Then [set up your project](project-setup/README.md) to use our Docker configuration.
