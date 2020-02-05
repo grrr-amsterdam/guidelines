@@ -1,5 +1,5 @@
 # Dependencies you need locally
-This is everything you need on a Mac to do development work at Grrr.
+This is everything you need on a Mac to do development work at GRRR.
 
 
 ## SSH key
@@ -15,7 +15,7 @@ ssh-add -K ~/.ssh/id_rsa > /dev/null 2>&1
 
 Source it to activate in the current session:
 ```bash
-$ . ~/.bash_profile
+$ source ~/.bash_profile
 ```
 
 Copy the public key to your clipboard:
@@ -77,8 +77,15 @@ export APPLICATION_ENV=development
 
 
 ## Node version
-Currently we don't support Node v10 yet.
-To downgrade to the latest LTS:
+Some projects support Node v8 some v10. The supported version is defined in `package.json`.
+
+[nvm](https://github.com/nvm-sh/nvm) is a Node version manager. After [installation](https://github.com/nvm-sh/nvm#install--update-script) you can use the `nvm` command like this:
+
+```bash
+$ nvm use 8
+```
+
+Switch Node version with Brew:
 
 ```bash
 $ brew install node@8
