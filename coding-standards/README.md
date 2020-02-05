@@ -1,4 +1,4 @@
-# Grrr coding standards
+# GRRR coding standards
 
 We use [General coding standards](general/README.md) for every language.
 
