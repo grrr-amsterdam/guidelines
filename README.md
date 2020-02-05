@@ -1,4 +1,4 @@
-# Grrr development guidelines
+# GRRR development guidelines
 Our guidelines and best practices for development and everything around it.
 
 
@@ -19,4 +19,4 @@ Please use relative links when referring to other documents in these repository.
 
 
 
-– Grrr
+– GRRR
