@@ -200,7 +200,7 @@ No hard and fast rules here, but try to stick to the following:
 
 ## Object Calisthenics
 
-At Grrr, we practice [Object Calisthenics](http://williamdurand.fr/2013/06/03/object-calisthenics/).
+At GRRR, we practice [Object Calisthenics](http://williamdurand.fr/2013/06/03/object-calisthenics/).
 Generally, the most important bits are:
 
 ### Only one level of indentation per method
