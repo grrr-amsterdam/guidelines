@@ -56,6 +56,18 @@ This won't update the `FROM` images in the custom Dockerfiles. You have pull the
 $ docker pull image-name
 ```
 
+## No space left
+
+Docker can take a lot of disk space because of all the images and containers it's storing. `--rm` when you use `docker run` will remove the container after exiting it, but the image is still downloaded. To monitor the disk space use `docker system`.
+
+Amount of disk space used by different types of data
+
+`docker system df`
+
+Remove non used containers, networks and images
+
+`docker system prune`
+
 ## Elastic
 
 Elastic search containers use a lot of memory. Something with Java... Running multiple of them will hang Docker of your computer. Prevent multiple Elastic search containers from running simultaneously. Stop the projects you're not working on. Or stop the Elastic container of your current project to reduce resource usage:
