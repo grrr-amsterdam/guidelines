@@ -179,7 +179,7 @@ COPY --from=composer /usr/bin/composer /usr/bin/composer
 ENV PATH $PATH:./vendor/bin
 ```
 
-## `./docker/php/php-fpm.conf`
+## `./docker/php/fpm.conf`
 
 With the default configuration you easily bump into gateway timeouts. This PHP FPM configuration prevents that from happening.
 
