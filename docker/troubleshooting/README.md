@@ -130,3 +130,19 @@ $ rm -rf /var/lib/docker/volumes/my-volume/_data
 Exit the screen session using `CTRL-A + CTRL-D`, and you're finally, finally free. Sweet release.
 
 This can really trip you up when a corrupted volume is associated with a certain container, which will prevent you from starting the container and doing work.
+
+## PHP exceptions not visible
+
+By default exceptions won't be logged to stderr, because normally exception will showup in your app during development. And when in production they have to be send someware else. For projects that don't have proper exception handling or your app is crashing before exception handling has started. A snippet to let PHP logs appear in docker logs.
+
+```ini
+# public/.user.ini
+log_errors = On
+error_log = /dev/stderr
+```
+
+Restart the php container and you can tail the logs:
+
+```bash
+docker-compose logs -f php
+```
