@@ -215,7 +215,35 @@ REV_PROXY_IP=$(printf "${NSLOOKUP}" | grep 'Address 1' | grep ${REV_PROXY_SERVIC
 echo "${REV_PROXY_IP} ${REV_PROXY_DOMAIN}" >> /etc/hosts
 ```
 
-[TO DO]
+## `./docker/web/httpd.conf`
 
-- httpd.conf?
-- fpm.conf
+Apache doesn't have a handy `conf.d` folder to add custom configuration. You have to change the main configuration to enable that. Because it has to change anyway, we just add Apache configuration to the main configuration file. Grab the default main configuration Apache:
+
+```bash
+docker run --rm -it httpd:2.4-alpine cat /usr/local/apache2/conf/httpd.conf > docker/web/httpd.conf
+```
+
+Ensure you use the same httpd version as in `docker-compose.yml`.
+
+Add a `VirtualHost` to the end of the file
+
+```httpd.conf
+<VirtualHost *:80>
+  LogLevel debug
+
+  ProxyPassMatch "^/(.*\.php(/.*)?)$" "fcgi://php:9000/var/www/html/public" enablereuse=on
+
+  <Directory "/usr/local/apache2/htdocs">
+    Options Indexes FollowSymLinks
+    AllowOverride All
+    Require all granted
+    DirectoryIndex index.php
+  </Directory>
+</VirtualHost>
+```
+
+You probably need some Apache modules eg. `mod_rewrite`. Uncomment the appropriate `LoadModule` line.
+
+```
+#LoadModule rewrite_module modules/mod_rewrite.so
+```
