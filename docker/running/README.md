@@ -11,7 +11,7 @@
 
 The following is an overview of the containers used in our preferred setup. Note that this might not yet be available in _all_ projects.
 
-(the example commands below assume you've added [these conventional shortcuts](os-setup/README.md#the-dce-and-dcr-shortcuts-to-run-docker-commands))
+(the example commands below assume you've added [these conventional shortcuts](../os-setup/README.md#the-dce-and-dcr-shortcuts-to-run-docker-commands))
 
 Conventionally, these are the services in use:
 
@@ -37,7 +37,7 @@ Conventionally, these are the services in use:
   - _Note that since this is not a running container, you use `docker-compose run` instead of `docker-compose exec`!_
 
 
-[See an example docker-compose.yml file and learn how to setup your project this way](docker-setup)
+[See an example docker-compose.yml file and learn how to setup your project this way](../docker-setup)
 
 ## Detached mode
 
