@@ -1,4 +1,11 @@
 # Troubleshooting
+
+- [Back to overview](../README.md).
+- [OS Preparation](../os-setup/README.md).
+- [Project setup](../project-setup/README.md).
+- [⚠️ **Troubleshooting**](../troubleshooting/README.md).
+- [Running projects in Docker](../running/README.md).
+
 ## Port in use? Free the ports!
 Make sure Apache / Nginx is not running on your local machine on port `80`.
 The same goes for MySQL if it's running on port `3306` on `localhost`.
