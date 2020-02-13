@@ -6,7 +6,8 @@
 - [⚠️ **Troubleshooting**](../troubleshooting/README.md).
 - [Running projects in Docker](../running/README.md).
 
-- Have your local `.env` file point to the Docker database host:
+
+Have your local `.env` file point to the Docker database host:
   `DB_HOST=db`
 
 
