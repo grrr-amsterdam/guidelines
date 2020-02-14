@@ -16,7 +16,7 @@ Make sure you have the following files in your project:
 - `docker-compose.yml`
 - `docker-compose.override.yml` (optional)
 
-## Speedup Composer install
+## Speed up Composer install
 
 Composer uses caching to speed up install and update commands, but with Docker the cache stays in the container. The next time you run Composer install the cache will be gone.
 
