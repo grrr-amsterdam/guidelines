@@ -153,3 +153,14 @@ Restart the php container and you can tail the logs:
 ```bash
 docker-compose logs -f php
 ```
+
+## Changed volume configuration
+
+After changing a volume configuration you'll get this error.
+
+```bash
+ERROR: Configuration for volume appdata specifies "device" driver_opt :/Users/xxx/Sites/xxx, but a volume with the same name uses a different "device" driver_opt (:/Users/xxx/sites/xxx). If you wish to use the new configuration, please remove the existing volume "xxx_appdata" first:
+$ docker volume rm xxx_appdata
+```
+
+Mostly caused by change in the Docker stack or when you enabled / disabled NFS. When the volume doesn't contain sensitive data you can safelly run the suggested command. It will remove the volume and recreated when starting Docker Compose.
