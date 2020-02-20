@@ -164,3 +164,11 @@ $ docker volume rm xxx_appdata
 ```
 
 Mostly caused by change in the Docker stack or when you enabled / disabled NFS. When the volume doesn't contain sensitive data you can safelly run the suggested command. It will remove the volume and recreated when starting Docker Compose.
+
+When the volume is connected to a container you get an error:
+
+```
+Error response from daemon: remove xxx_appdata: volume is in use - [xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx]
+```
+
+You have to remove the container that uses that volume. Run `docker-compose rm` to remove all containers in your Docker Compose stack. You can savely execute this command, because it won't remove volumes, so your data won't be lost.
