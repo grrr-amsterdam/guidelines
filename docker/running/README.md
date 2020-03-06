@@ -66,7 +66,7 @@ $ docker-compose pull
 $ docker-compose stop && docker-compose up
 ```
 
-But this won't pull images for services that use a `Dockerfile`. You have to manually pull those updates. Look for the images name and version in the `Dockerfile` of the service you want to update.
+But this won't pull images for services that use a `Dockerfile`. You have to manually pull those updates. Look for image name and version in the `Dockerfile` of the service you want to update. There will always be one or more `FROM` lines, but `COPY` can also contain an image name.
 
 A list of commonly used images, but always check the `Dockerfile` because binary and Alpine version can vary:
 
