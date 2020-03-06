@@ -55,3 +55,35 @@ Follow the logs of the php container run `docker-compose logs -f php`. To follow
 Use `CTRL + C` in a running Docker window to stop both.
 
 When running in detached mode do `docker-compose stop` in your project folder. This won't throw away the containers. To do that run `docker-compose down`, but stop is usually what you want.
+
+## Update images
+
+When Docker Compose can't find an image it will download it. But after that it won't fetch updates. To pull the latest images run:
+
+```bash
+$ docker-compose pull
+# and restart
+$ docker-compose stop && docker-compose up
+```
+
+But this won't pull images for services that use a `Dockerfile`. You have to manually pull those updates. Look for the images name and version in the `Dockerfile` of the service you want to update.
+
+A list of commonly used images, but always check the `Dockerfile` because binary and Alpine version can vary:
+
+```bash
+# Builder service
+$ docker pull node:10-alpine
+# Deploy service
+$ docker pull node:12-alpine
+# PHP service
+$ docker pull php:7.1-fpm-alpine
+$ docker pull composer
+```
+
+To use the pulled images you have to rebuild your app images:
+
+```bash
+$ docker-compose build
+# and restart
+$ docker-compose stop && docker-compose up
+```
