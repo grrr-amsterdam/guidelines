@@ -174,7 +174,7 @@ ADD add-reverse-proxy-host.sh docker/php/
 ADD fpm.conf /usr/local/etc/php-fpm.d/zz.fpm.conf
 
 ENV COMPOSER_ALLOW_SUPERUSER 1
-COPY --from=composer /usr/bin/composer /usr/bin/composer
+COPY --from=composer:2 /usr/bin/composer /usr/bin/composer
 
 ENV PATH $PATH:./vendor/bin
 ```
