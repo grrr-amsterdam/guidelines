@@ -1,6 +1,11 @@
 # GRRR development guidelines
 Our guidelines and best practices for development and everything around it.
 
+❗️❗️ Sorry! We moved everything to Coda, our new internal documentation tool. This repository is archived.  
+[Please find the Development Docs here](https://coda.io/d/Development-Docs_dkXTSr4dR9g/Development-Docs_suXz9).
+
+
+
 
 ## Mantras
 - We start developing when there is a clear scope.
